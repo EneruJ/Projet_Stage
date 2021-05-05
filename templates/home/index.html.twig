@@ -1,0 +1,19 @@
+{# templates/home/index.html.twig #}
+{% extends "base.html.twig" %}
+
+{% block title %}Accueil | {{ parent() }}{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <h1>Hello, c'est la page d'accueil</h1>
+            </div>
+            <div class="col s12 m12 l12">
+                {% block another_block %}
+                    <h2>Vous pouvez vous connecter !</h2>
+                {% endblock %}
+            </div>
+        </div>
+    </div>
+{% endblock %}
