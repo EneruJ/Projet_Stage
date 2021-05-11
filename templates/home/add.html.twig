@@ -1,0 +1,10 @@
+{# templates/home/add.html.twig #}
+{% extends "base.html.twig" %}
+{% block content %}
+
+    <h1>Ajouter un document</h1>
+    {{ form_start(form) }}
+{{ form(form) }}
+    {{ form_end(form) }}
+
+{% endblock %}

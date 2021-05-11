@@ -1,0 +1,11 @@
+vich_uploader:
+    db_driver: orm
+
+    mappings:
+        document_image:
+            uri_prefix: /documents/pdf
+            upload_destination: '%kernel.project_dir%/public/documents/pdf'
+
+            inject_on_load: false
+            delete_on_update: true
+            delete_on_remove: true

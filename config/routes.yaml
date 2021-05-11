@@ -5,3 +5,15 @@
 homepage:
   path: /
   controller: App\Controller\HomeController::index
+
+homepage_connected:
+  path: /logged/
+  controller: App\Controller\IController::index
+
+document_add:
+  path: /add/
+  controller: App\Controller\AddController::add
+
+show_pdf:
+  path: /pdf/{name}
+  controller: App\Controller\HomeController::show
