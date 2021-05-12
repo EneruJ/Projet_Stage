@@ -1,5 +1,5 @@
 {# templates/home/index.html.twig #}
-{% extends "base.html.twig" %}
+{% extends "base_connected.html.twig" %}
 
 {% block title %}Accueil | {{ parent() }}{% endblock %}
 
@@ -18,7 +18,7 @@
                                 <p class="card-text">{{  document.Resume | slice(0,100) }}</p>
                                 <div class="d-flex justify-content-between align-items-center">
                                     <div class="btn-group">
-                                        <button type="button" class="btn btn-sm btn-outline-secondary"><a href="{{ path('show_pdf', {"name" : document.docName}) }}">Download</a></button>
+                                        <button type="button" class="btn btn-sm btn-outline-secondary"><a href="{{ path('show_pdf', {"name" : document.docName}) }}" style="text-decoration: none; color: white;">Download</a></button>
                                         <button type="button" class="btn btn-sm btn-outline-secondary">Delete</button>
                                     </div>
                                     <small class="text-muted">9 mins</small>
