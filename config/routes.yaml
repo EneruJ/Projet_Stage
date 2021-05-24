@@ -10,6 +10,12 @@ homepage_connected:
   path: /logged/
   controller: App\Controller\IController::index
 
+filtre:
+  path: /logged/{info}
+  controller: App\Controller\IController::itest
+  defaults:
+    info : "Oui"
+
 document_add:
   path: /add/
   controller: App\Controller\AddController::add
@@ -18,11 +24,4 @@ show_pdf:
   path: /pdf/{name}
   controller: App\Controller\HomeController::show
 
-register:
-  path: /register
-  controller: App\Controller\RegistrationController::register
-
-login:
-  path: /login
-  controller: App\Controller\SecurityController::login
 

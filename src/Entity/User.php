@@ -70,6 +70,11 @@ class User implements UserInterface
      */
     private $documents;
 
+    /**
+     * @ORM\Column(type="integer", nullable=true)
+     */
+    private $nbDoc;
+
     public function __construct()
     {
         $this->documents = new ArrayCollection();
@@ -251,5 +256,17 @@ class User implements UserInterface
         return $this->username;
         // to show the id of the Category in the select
         // return $this->id;
+    }
+
+    public function getNbDoc(): ?int
+    {
+        return $this->nbDoc;
+    }
+
+    public function setNbDoc(?int $nbDoc): self
+    {
+        $this->nbDoc = $nbDoc;
+
+        return $this;
     }
 }

@@ -15,5 +15,10 @@
         "dev": "encore dev",
         "watch": "encore dev --watch",
         "build": "encore production --progress"
+    },
+    "dependencies": {
+        "@massimo-cassandro/symfony-bootstrap-form-theme": "^2.3.2",
+        "@popperjs/core": "^2.9.2",
+        "webpack": "^4.46.0"
     }
 }
