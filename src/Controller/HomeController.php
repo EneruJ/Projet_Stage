@@ -19,7 +19,12 @@ class HomeController extends AbstractController
 
     public function connected()
     {
-        return $this->render('home/index_c.html.twig');
+        $userRole = $this->getUser()->getRoles();
+        if (in_array("ROLE_ADMIN", $userRole)) {
+            return $this->render('home/index_a.html.twig');
+        } else {
+            return $this->render('home/index_c.html.twig');
+        }
     }
     public function show($name)
     {

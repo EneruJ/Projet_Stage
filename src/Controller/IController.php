@@ -10,10 +10,17 @@ class IController extends AbstractController
 
     public function index(DocumentRepository $documentRepository)
     {
+        $userRole = $this->getUser()->getRoles();
+        if (in_array("ROLE_ADMIN", $userRole)) {
+            return $this->render('home/index_a.html.twig', [
+                "documents" => $documentRepository->findAll()
+            ]);
+        } else {
+            return $this->render('home/index_c.html.twig', [
+                "documents" => $documentRepository->findAll()
+            ]);
+        }
 
-        return $this->render('home/index_c.html.twig', [
-            "documents" => $documentRepository->findAll()
-        ]);
     }
 
     public function itest(DocumentRepository $documentRepository, $info)
