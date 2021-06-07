@@ -1,0 +1,40 @@
+{# templates/home/index.html.twig #}
+{% extends "base_admin.html.twig" %}
+
+{% block title %}Accueil | {{ parent() }}{% endblock %}
+
+{% block content %}
+
+
+    <main role="main" class="container" >
+
+
+        <a href="{{ path('filtre', {info : "Blabla"}) }}"> Titre = Blabla</a>
+        <a href="{{ path('filtre', {info : "Enerou"}) }}">idUser = Enerou</a>
+
+        <HR align=center size=8 width="50%">
+        {% for document in documents %}
+            <div class="container">
+
+                <div class="well">
+                    <div class="media">
+                        <a class="pull-left" href="#">
+                            <img src="data:image/png;base64,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" alt="image"/>
+                        </a>
+                        <div class="media-body">
+                            <h4 class="media-heading">{{ document.titre }}</h4>
+                            <p class="text-right">{{ document.idUser }}</p>
+                            <p>{{  document.Resume | slice(0,100) }}</p>
+                        </div>
+                        <div class="d-flex justify-content-between align-items-center">
+                            <div class="btn-group">
+                                <button type="button" class="btn btn-sm btn-outline-secondary"><a href="{{ path('show_pdf', {"name" : document.docName}) }}" style="text-decoration: none; color: black;">Download</a></button>
+                                <button type="button" class="btn btn-sm btn-outline-secondary"><a href="{{ path('filtre') }}" style="text-decoration: none; color: black;">Delete</a></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </main>
+{% endblock %}

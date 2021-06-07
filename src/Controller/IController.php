@@ -2,6 +2,7 @@
 
 namespace App\Controller;
 
+use App\Repository\UserRepository;
 use App\Repository\DocumentRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
@@ -23,6 +24,13 @@ class IController extends AbstractController
 
     }
 
+
+    public function stats (UserRepository $userRepository)
+    {
+
+        return $this->render('home/admin_stats.html.twig', [
+            "users" => $userRepository->findAll()]);
+    }
     public function itest(DocumentRepository $documentRepository, $info)
     {
 

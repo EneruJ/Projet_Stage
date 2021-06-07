@@ -24,4 +24,8 @@ show_pdf:
   path: /pdf/{name}
   controller: App\Controller\HomeController::show
 
+app_stats:
+  path: /stats/
+  controller: App\Controller\IController::stats
+
 

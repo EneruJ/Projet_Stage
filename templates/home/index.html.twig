@@ -3,17 +3,16 @@
 
 {% block title %}Accueil | {{ parent() }}{% endblock %}
 
+
 {% block content %}
-    <div class="container">
-        <div class="row">
-            <div class="col s12 m12 l12">
-                <h1>Hello, c'est la page d'accueil</h1>
-            </div>
-            <div class="col s12 m12 l12">
-                {% block another_block %}
-                    <h2>Vous pouvez vous connecter !</h2>
-                {% endblock %}
+    <header class="masthead">
+        <div class="container h-100">
+            <div class="row h-100 align-items-center">
+                <div class="col-12 text-center">
+                    <img src="https://www.u-picardie.fr/uas/ksup/logo_pied_1/plan.png" alt="company logo" style="width: 100%;">
+                    <h1 class="font-weight-light">Bienvenue sur le site de l'EPROAD LabDocCenter</h1>
+                </div>
             </div>
         </div>
-    </div>
+    </header>
 {% endblock %}
